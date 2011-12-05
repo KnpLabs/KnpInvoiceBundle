@@ -1,0 +1,57 @@
+﻿{
+    "name": "KnpLabs/KnpInvoiceBundle",
+    "type": "symfony-bundle",
+    "description": "PDF invoice generation",
+    "keywords": ["invoice", "pdf"],
+    "authors": [
+        {
+            "name": "Józef Bielawski",
+            "email": "jozef.bielawski@knplabs.com"
+        }
+    ],
+    "repositories": {
+        "knp snappy": {
+            "package": {
+                "name": "KnpLabs/Snappy",
+                "dist": {
+                    "url": https://github.com/KnpLabs/snappy/zipball/master",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/KnpLabs/snappy.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+        "knp snappy bundle": {
+            "package": {
+                "name": "KnpLabs/KnpSnappyBundle",
+                "dist": {
+                    "url": "https://github.com/KnpLabs/KnpSnappyBundle/zipball/master",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/KnpLabs/KnpSnappyBundle.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    },
+    "require": {
+        "php": ">=5.3.2",
+        "symfony": ">2.0,<2.2-dev",
+        "KnpLabs/Snappy": "*",
+        "KnpLabs/KnpSnappyBundle": "*"
+    },
+    "suggest": {
+        "ext-phpwkhtmltox": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Knp\\Bundle\\KnpInvoice": "src/"
+        }
+    },
+    "target-dir": "Knp/Bundle/KnpInvoice"
+}

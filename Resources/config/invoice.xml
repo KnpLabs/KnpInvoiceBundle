@@ -1,0 +1,15 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="knp_invoice.generator.twig.class">Knp\Invoice\Generators\Twig</parameter>
+        <parameter key="knp_invoice.generator.snappy.class">Knp\Invoice\Generators\Snappy</parameter>
+        <parameter key="knp_invoice.theme.path">Resources/views/simple_theme</parameter>
+        <parameter key="knp_invoice.theme.template">invoice.html.twig</parameter>
+    </parameters>
+
+    <services>
+        <service id="knp_invoice.generator" class="%knp_invoice.generator.twig.class%" />
+    </services>
+</container>
