@@ -1,57 +1,32 @@
-﻿{
-    "name": "KnpLabs/KnpInvoiceBundle",
+{
+    "name": "knplabs/knp-invoice-bundle",
     "type": "symfony-bundle",
-    "description": "PDF invoice generation",
+    "description": "PDF invoice generation bundle",
     "keywords": ["invoice", "pdf"],
+
     "authors": [
         {
-            "name": "Józef Bielawski",
-            "email": "jozef.bielawski@knplabs.com"
+            "name": "KnpLabs Team",
+            "homepage": "http://knplabs.com"
         }
     ],
-    "repositories": {
-        "knp snappy": {
-            "package": {
-                "name": "KnpLabs/Snappy",
-                "dist": {
-                    "url": https://github.com/KnpLabs/snappy/zipball/master",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "https://github.com/KnpLabs/snappy.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-        "knp snappy bundle": {
-            "package": {
-                "name": "KnpLabs/KnpSnappyBundle",
-                "dist": {
-                    "url": "https://github.com/KnpLabs/KnpSnappyBundle/zipball/master",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "https://github.com/KnpLabs/KnpSnappyBundle.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-    },
+
     "require": {
         "php": ">=5.3.2",
-        "symfony": ">2.0,<2.2-dev",
-        "KnpLabs/Snappy": "*",
-        "KnpLabs/KnpSnappyBundle": "*"
+        "symfony/framework-bundle": "2.*",
+        "knplabs/knp-snappy-bundle": "dev-master",
+        "knplabs/knp-invoice": "dev-master"
     },
+
     "suggest": {
         "ext-phpwkhtmltox": "*"
     },
+
     "autoload": {
         "psr-0": {
-            "Knp\\Bundle\\KnpInvoice": "src/"
+            "Knp\\Bundle\\InvoiceBundle": ""
         }
     },
-    "target-dir": "Knp/Bundle/KnpInvoice"
+
+    "target-dir": "Knp/Bundle/InvoiceBundle"
 }
